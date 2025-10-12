@@ -6,6 +6,7 @@ import BREEDS_JSON from "../pawdentify_final_corrected.json";
 import TextCard from "./cards/TextCard";
 import AccordionCard from "./cards/AccordionCard";
 import BreedTabs from "./BreedTabs";
+import FeedbackForm from "./FeedbackForm";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Tab sections (5 sections for tabs)
@@ -141,6 +142,11 @@ export default function BreedInfoDisplay({ predictionResult }) {
         <p className="text-xl font-archivo font-semibold text-center max-w-3xl" style={{ color: "var(--color-breed-fun-fact)" }}>
           {funFact}
         </p>
+      </div>
+
+      {/* Feedback Form */}
+      <div className="max-w-2xl mx-auto mb-8">
+        <FeedbackForm prediction={predBreedName} />
       </div>
 
       {/* Know More Button */}
