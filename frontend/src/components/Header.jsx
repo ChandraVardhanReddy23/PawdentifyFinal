@@ -130,6 +130,11 @@ const Header = ({ showInfo }) => {
                     <Link to="/services" className="nav-link font-alfa font-bold text-xl tracking-wide cursor-pointer">
                       {t("header.services")}
                     </Link>
+                    {user?.publicMetadata?.role === 'admin' && (
+                      <Link to="/admin" className="nav-link font-alfa font-bold text-xl tracking-wide cursor-pointer">
+                        Feedback
+                      </Link>
+                    )}
                   </SignedIn>
 
                   <SignedOut>
